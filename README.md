@@ -1,17 +1,30 @@
-# FK Construct — site vitrine
+# FK My Construct — site vitrine
 
-Site vitrine statique (HTML / CSS / JS, sans framework ni build) pour un artisan maçon-carreleur.
+Site vitrine statique (HTML / CSS / JS, sans framework ni build) pour Farid Khibaziev, artisan maçon-carreleur (Hampteau, Belgique).
 
 ## Structure
 
 ```
-index.html          Accueil
-realisations.html   Galerie de réalisations (avec filtres)
-contact.html         Coordonnées + formulaire de contact
-css/style.css        Feuille de style unique
-js/script.js          Menu mobile, filtres galerie, validation du formulaire
-vercel.json           Config Vercel (URLs propres, sans .html)
+index.html                Accueil
+realisations.html         Galerie de réalisations (avec filtres)
+contact.html               Coordonnées + formulaire de contact
+mentions-legales.html      Mentions légales
+conditions-generales.html  Conditions générales d'utilisation
+css/style.css               Feuille de style unique
+js/script.js                 Menu mobile, filtres galerie, validation du formulaire
+images/                       Logo, favicon et visuels réels (voir ci-dessous)
+vercel.json                   Config Vercel (URLs propres, sans .html)
 ```
+
+## Logo & favicon
+
+Déposer les fichiers dans `images/` avec ces noms exacts, puis me signaler pour que je les intègre dans le header/footer/onglet navigateur :
+
+- `images/logo.png` — logo seul (juste le monogramme + "FK MY CONSTRUCT"), fond transparent si possible, pour le header (fond blanc).
+- `images/logo-white.png` — variante claire/blanche du logo, pour le footer (fond sombre). Facultatif si le logo actuel passe déjà bien sur fond foncé.
+- `images/favicon.png` — version carrée (512×512 mini) pour l'icône d'onglet.
+
+La carte de visite complète (avec téléphone/adresse) ne convient pas telle quelle comme logo web : il faut un export ne contenant que le monogramme/texte de marque.
 
 ## Aperçu en local
 
@@ -31,6 +44,7 @@ npx serve .
 ## À faire avant mise en ligne chez le client
 
 - Remplacer les images génériques (picsum.photos) par de vraies photos de chantiers.
-- Remplacer les coordonnées fictives (adresse, téléphone, email) dans les 3 pages + footer.
+- Ajouter les fichiers logo/favicon dans `images/` (voir section ci-dessus).
+- Définir une adresse email professionnelle (aucune n'existe encore) et l'ajouter dans le footer + page Contact.
 - Brancher l'envoi réel du formulaire de contact (ex. Formspree, ou une fonction serverless Vercel) — actuellement seule la validation côté client est active.
-- Remplacer l'iframe Google Maps (actuellement centrée sur Paris) par l'adresse réelle.
+- Vérifier/confirmer les chiffres du bandeau "15+ ans d'expérience / 200+ chantiers" sur l'accueil (actuellement des valeurs indicatives, à valider avec Farid).
