@@ -170,6 +170,16 @@ p {
   color: var(--color-accent);
 }
 
+.logo img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.footer-grid .logo img {
+  height: 40px;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -779,6 +789,7 @@ p {
   padding-top: 22px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   flex-wrap: wrap;
   gap: 10px;
   font-size: 0.82rem;
@@ -792,6 +803,40 @@ p {
 
 .footer-bottom a:hover {
   color: var(--color-accent);
+}
+
+.flabs-credit {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.flabs-logo {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 44px;
+}
+
+.flabs-logo img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.flabs-logo-hover {
+  opacity: 0;
+}
+
+.flabs-credit:hover .flabs-logo-default {
+  opacity: 0;
+}
+
+.flabs-credit:hover .flabs-logo-hover {
+  opacity: 1;
 }
 
 /* ---- Contenu légal (mentions légales / CGU) ---- */
